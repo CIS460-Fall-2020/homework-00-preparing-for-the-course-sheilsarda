@@ -11,13 +11,13 @@
 
 #include <QtCore/QVariant>
 #include <QtWidgets/QApplication>
-#include <QtWidgets/QCheckBox>
 #include <QtWidgets/QMainWindow>
 #include <QtWidgets/QMenuBar>
 #include <QtWidgets/QPushButton>
 #include <QtWidgets/QSpinBox>
 #include <QtWidgets/QStatusBar>
 #include <QtWidgets/QWidget>
+#include "mycheckboxwidget.h"
 
 QT_BEGIN_NAMESPACE
 
@@ -26,7 +26,7 @@ class Ui_MainWindow
 public:
     QWidget *centralwidget;
     QPushButton *pushButton;
-    QCheckBox *checkBox;
+    MyCheckBoxWidget *checkBox;
     QSpinBox *spinBox;
     QMenuBar *menubar;
     QStatusBar *statusbar;
@@ -41,7 +41,7 @@ public:
         pushButton = new QPushButton(centralwidget);
         pushButton->setObjectName(QString::fromUtf8("pushButton"));
         pushButton->setGeometry(QRect(110, 100, 75, 23));
-        checkBox = new QCheckBox(centralwidget);
+        checkBox = new MyCheckBoxWidget(centralwidget);
         checkBox->setObjectName(QString::fromUtf8("checkBox"));
         checkBox->setGeometry(QRect(230, 120, 101, 31));
         spinBox = new QSpinBox(centralwidget);
